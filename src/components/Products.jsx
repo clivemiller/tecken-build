@@ -1,7 +1,7 @@
 import React from 'react';
-import image_truck from './..\\assets\\images\\IMG_1859.jpg';
-import image_banner from './..\\assets\\images\\IMG_1986.jpg';
-import image_signage from './..\\assets\\images\\IMG_1996.jpg'; 
+import image_truck from './../assets/images/IMG_1859.jpg';
+import image_banner from './../assets/images/IMG_1986.jpg';
+import image_signage from './../assets/images/IMG_1996.jpg'; 
 
 const Products = () => {
   const productCategories = [
