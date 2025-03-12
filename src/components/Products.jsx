@@ -1,5 +1,6 @@
 import React from 'react';
 import image_truck from './../assets/images/IMG_1859.jpg';
+import image_design from './../assets/images/IMG_3663.jpg';
 import image_banner from './../assets/images/IMG_1986.jpg';
 import image_signage from './../assets/images/IMG_1996.jpg'; 
 
@@ -35,17 +36,17 @@ const Products = () => {
     },
     {
       id: 5,
-      title: 'Digital Prints',
-      description: 'High-resolution large format printing for posters, wall graphics, window displays, and more.',
-      imageAlt: 'Large Format Digital Printing',
+      title: 'Vehicle Wraps',
+      description: 'Our licensed installers can wrap your vehicle with custom graphics to promote your brand.',
+      imageAlt: 'Vehicle Wrap',
       image: image_truck
     },
     {
       id: 6,
-      title: 'Product 6',
-      description: '.. .. .. .. ',
-      imageAlt: 'Product 6',
-      image: image_truck
+      title: 'Graphic and Website Design',
+      description: 'Let our design team create a unique logo, website, or marketing materials for your business with unlimited reiterations until satifaction.',
+      imageAlt: 'design',
+      image: image_design
     },
   ];
 
@@ -75,7 +76,7 @@ const Products = () => {
                 <div className="w-full h-full flex items-center justify-center text-gray-500 group-hover:scale-110 transition-transform duration-500">
                   <img alt={product.imgAlt} src={product.image}/>
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-white opacity-70"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-white opacity-50"></div>
               </div>
               <div className="p-8">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">

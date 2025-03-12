@@ -1,4 +1,5 @@
 import React from 'react';
+import image_employee from './../assets/images/IMG_3670.jpg'; 
 
 const Hero = () => {
   return (
@@ -33,7 +34,7 @@ const Hero = () => {
               {/* Hero image placeholder - replace with actual image */}
               <div className="bg-gray-100 rounded-2xl h-96 w-full overflow-hidden shadow-xl">
                 <div className="h-full w-full flex items-center justify-center text-gray-500">
-                  <span>Hero Image: Showcase of Custom Signs</span>
+                  <img src={image_employee} alt={"Hero Image"} className="m-4 relative top-16" />
                 </div>
                 
                 {/* Floating elements for visual interest */}
