@@ -236,10 +236,10 @@ const Contact = () => {
     
     // Send email using EmailJS
     emailjs.sendForm(
-      'YOUR_SERVICE_ID', // Get this from EmailJS dashboard
-      'YOUR_TEMPLATE_ID', // Get this from EmailJS dashboard
+      'service_tecken-email', // Get this from EmailJS dashboard
+      'template_0jo9omq', // Get this from EmailJS dashboard
       form.current,
-      'YOUR_PUBLIC_KEY' // Get this from EmailJS dashboard
+      '_-jkNrYaXcZFa1UoT' // PUBLIC_KEY from EmailJS (not secret key)
     )
       .then((result) => {
         console.log('Email sent successfully:', result.text);
@@ -324,7 +324,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="text-lg font-medium text-gray-900">Our Location</h4>
-                      <p className="text-gray-600 font-light">123 Sign Street, Design District<br />Anytown, ST 12345</p>
+                      <p className="text-gray-600 font-light">2216 S. Main St. Suite D2<br />Moscow, ID 83843</p>
                     </div>
                   </div>
                   
@@ -336,7 +336,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="text-lg font-medium text-gray-900">Phone</h4>
-                      <p className="text-gray-600 font-light">(555) 123-4567</p>
+                      <p className="text-gray-600 font-light">(208) 997 8230</p>
                     </div>
                   </div>
                   
@@ -349,16 +349,9 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="text-lg font-medium text-gray-900">Email</h4>
-                      <p className="text-gray-600 font-light">info@tecken-signs.com</p>
+                      <p className="text-gray-600 font-light">info@tecken.graphics</p>
                     </div>
                   </div>
-                </div>
-                
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Business Hours</h3>
-                  <p className="text-gray-600 mb-1 font-light">Monday - Friday: 8:00 AM - 5:00 PM</p>
-                  <p className="text-gray-600 mb-1 font-light">Saturday: 9:00 AM - 2:00 PM</p>
-                  <p className="text-gray-600 font-light">Sunday: Closed</p>
                 </div>
               </div>
             </div>
