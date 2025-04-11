@@ -14,9 +14,7 @@ const Header = () => {
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <div className="h-10 w-10 bg-black rounded-md mr-2">
-              {/* Logo placeholder - replace with actual logo */}
-            </div>
+            <img src="/tecken-logo-black.svg" alt="Logo" className="h-8 w-8" />
             <span className="text-xl font-bold text-gray-900">Tecken</span>
             <span className="text-sm text-gray-600 ml-2 mt-[5px]">Signs & Graphics</span>
           </div>

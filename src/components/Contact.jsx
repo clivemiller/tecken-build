@@ -83,10 +83,7 @@ const EmailConfirmationDialog = ({ isOpen, onClose }) => {
       
       // Timeline for animation stages
       const timeline = [
-        setTimeout(() => setAnimationStage(1), 400),  // Logo appears
-        setTimeout(() => setAnimationStage(2), 1000), // Envelope forms
-        setTimeout(() => setAnimationStage(3), 1800), // Envelope sends
-        setTimeout(() => setAnimationStage(4), 2600), // Success message
+        setTimeout(() => setAnimationStage(4), 200), // Success message
       ];
       
       // Cleanup timeouts if dialog closes
@@ -105,89 +102,17 @@ const EmailConfirmationDialog = ({ isOpen, onClose }) => {
           className="absolute top-4 right-4 text-gray-500 hover:text-gray-800 transition-colors"
         >
           <X size={24} />
-        </button>
-        
-        {/* Container for the animation */}
-        <div className="h-64 flex flex-col items-center justify-center relative">
-          {/* Logo */}
-          <div className={`transform transition-all duration-500 ${
-            animationStage >= 1 ? 'opacity-100 scale-100' : 'opacity-0 scale-50'
-          }`}>
-            {/* Sign logo - abstract "T" for Tecken */}
-            <div className="relative mb-6">
-              <div className="w-24 h-24 bg-black rounded-lg flex items-center justify-center overflow-hidden">
-                <div className="absolute w-16 h-4 bg-gray-200 top-4"></div>
-                <div className="absolute w-4 h-16 bg-gray-200 left-10"></div>
-                {animationStage >= 2 && (
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <svg viewBox="0 0 100 100" width="70" height="70" className={`transform transition-all duration-700 ${
-                      animationStage >= 3 ? 'translate-y-40 scale-75 opacity-0' : 'translate-y-0'
-                    }`}>
-                      <path
-                        fill="none"
-                        stroke="white"
-                        strokeWidth="4"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d={`M 10,30
-                           L 50,50
-                           L 90,30
-                           L 90,70
-                           Q 90,80 80,80
-                           L 20,80
-                           Q 10,80 10,70
-                           L 10,30`}
-                        className={`${animationStage >= 2 ? 'animate-drawPath' : 'opacity-0'}`}
-                      />
-                    </svg>
-                  </div>
-                )}
-              </div>
-            </div>
-          </div>
-          
-          {/* Flying envelope animation */}
-          {animationStage >= 3 && (
-            <div className="absolute">
-              <svg 
-                viewBox="0 0 100 100" 
-                width="50" 
-                height="50"
-                className={`transition-all duration-1000 ease-out ${
-                  animationStage >= 3 ? 'opacity-100 animate-flyAway' : 'opacity-0'
-                }`}
-              >
-                <path
-                  fill="black"
-                  d={`M 10,30
-                     L 50,50
-                     L 90,30
-                     L 90,70
-                     Q 90,80 80,80
-                     L 20,80
-                     Q 10,80 10,70
-                     L 10,30`}
-                />
-                <path
-                  fill="rgba(255, 255, 255, 0.8)"
-                  d="M 10,30 L 50,50 L 90,30 L 50,15 z"
-                />
-              </svg>
-            </div>
-          )}
-          
-          {/* Success checkmark animation */}
-          {animationStage >= 4 && (
-            <div className="mt-2 transform transition-all duration-500 ease-out scale-100 opacity-100">
-              <div className="bg-black rounded-full p-2 mb-4">
-                <svg className="w-8 h-8 text-white animate-checkmark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2 text-center">Message Sent!</h3>
-              <p className="text-gray-600 text-center">Thank you for your inquiry! We'll contact you within 24 hours.</p>
-            </div>
-          )}
+        </button>        
+        {/* SUCCESS ANIMATION */}
+        <div className={`flex items-center justify-center ${animationStage >= 1 ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}>
+          <svg className="w-16 h-16 text-green-500 animate-checkmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M20 6L9 17l-5-5"></path>
+          </svg>
+        </div>
+        {/* Success message */}
+        <div className={`mt-6 text-center ${animationStage >= 2 ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}>
+          <h2 className="text-2xl font-bold text-gray-900">Email Sent!</h2>
+          <p className="text-gray-600 mt-2">Thank you for your message. We will get back to you shortly.</p>
         </div>
         
         {/* Button shown at the end */}

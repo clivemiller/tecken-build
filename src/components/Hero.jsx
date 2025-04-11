@@ -39,14 +39,14 @@ const Hero = () => {
                 
                 {/* Floating elements for visual interest */}
                 <div className="absolute top-16 -left-8 h-20 w-28 bg-black rounded-xl flex items-center justify-center shadow-lg transform -rotate-6">
-                  <span className="text-white font-bold text-lg ml-3">info</span>
-                  <span className="text-white text-xs ml-1 mr-2"> card 1</span>
+                  <span className="text-white font-bold text-lg ml-3">Fast</span>
+                  <span className="text-white text-sm ml-1 mr-2">production</span>
                 </div>
                 
                 <div className="absolute bottom-16 -right-8 h-24 w-40 bg-black rounded-xl flex items-center justify-center shadow-lg transform rotate-6">
                   <div className="text-center">
-                    <span className="text-white font-bold text-lg">info</span>
-                    <div className="text-white text-xs"> card 2</div>
+                    <span className="text-white font-bold text-lg ml-3">Excellent</span>
+                    <span className="text-white text-lg ml-1 mr-2">print quality</span>
                   </div>
                 </div>
               </div>
@@ -54,18 +54,18 @@ const Hero = () => {
           </div>
         </div>
         
-        {/* Trusted brands section */}
+        {/* Trusted brands section
         <div className="mt-20 pt-12 border-t border-gray-200">
           <p className="text-center text-gray-500 text-sm mb-6 uppercase tracking-wider">Trusted by local brands</p>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
             {/* Replace with actual client logos */}
-            {[1, 2, 3, 4, 5].map((item) => (
+            {/* {[1, 2, 3, 4, 5].map((item) => (
               <div key={item} className="h-10 w-24 bg-gray-100 rounded flex items-center justify-center text-gray-500 text-xs">
                 Client Logo {item}
               </div>
-            ))}
-          </div>
-        </div>
+            ))} */}
+          {/* </div>
+        </div> */}
       </div>
     </section>
   );
