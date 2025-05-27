@@ -5,20 +5,6 @@ const Pricing = () => {
   const services = [
     {
       id: 1,
-      title: 'Design Services',
-      description: 'Our experienced design team will bring your vision to life with custom graphics and signage concepts.',
-      features: [
-        'Initial consultation and needs assessment',
-        'Custom design concepts',
-        'Digital mockups and proofs',
-        'Unlimited revisions until approval',
-        'Print-ready file preparation'
-      ],
-      isPopular: false,
-      cta: 'Schedule Consultation'
-    },
-    {
-      id: 2,
       title: 'Full-Service Solutions',
       description: 'From concept to installation, we handle every aspect of your signage project with precision and care.',
       features: [
@@ -26,14 +12,13 @@ const Pricing = () => {
         'Premium materials selection',
         'Fabrication and production',
         'Professional installation',
-        'Permit acquisition assistance',
         'Ongoing maintenance available'
       ],
       isPopular: true,
       cta: 'Get a Complete Quote'
     },
     {
-      id: 3,
+      id: 2,
       title: 'Express Production',
       description: 'Need signs fast? Our express service delivers quality signage on an accelerated timeline.',
       features: [
@@ -65,7 +50,7 @@ const Pricing = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 justify-center items-stretch">
           {services.map((service) => (
             <div 
               key={service.id} 

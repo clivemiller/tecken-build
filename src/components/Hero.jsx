@@ -1,5 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import image_employee from './../assets/images/IMG_3670.jpg'; 
+
+const isMobile = () => {  
+  return window.innerWidth <= 768; // Adjust breakpoint as needed
+};
 
 const Hero = () => {
   return (
@@ -36,19 +40,25 @@ const Hero = () => {
                 <div className="h-full w-full flex items-center justify-center text-gray-500">
                   <img src={image_employee} alt={"Hero Employee"} className="m-4 relative top-16" />
                 </div>
-                
-                {/* Floating elements for visual interest */}
-                <div className="absolute top-16 -left-8 h-20 w-28 bg-black rounded-xl flex items-center justify-center shadow-lg transform -rotate-6">
-                  <span className="text-white font-bold text-lg ml-3">Fast</span>
-                  <span className="text-white text-sm ml-1 mr-2">production</span>
-                </div>
-                
-                <div className="absolute bottom-16 -right-8 h-24 w-40 bg-black rounded-xl flex items-center justify-center shadow-lg transform rotate-6">
-                  <div className="text-center">
-                    <span className="text-white font-bold text-lg ml-3">Excellent</span>
-                    <span className="text-white text-lg ml-1 mr-2">print quality</span>
+
+                {isMobile() ? (
+
+                <>
+                  <div className="absolute top-16 -left-8 h-20 w-28 bg-black rounded-xl flex items-center justify-center shadow-lg transform -rotate-6">
+                    <span className="text-white font-bold text-lg ml-3">Fast</span>
+                    <span className="text-white text-sm ml-1 mr-2">production</span>
                   </div>
-                </div>
+                  
+                  <div className="absolute bottom-16 -right-8 h-24 w-40 bg-black rounded-xl flex items-center justify-center shadow-lg transform rotate-6">
+                    <div className="text-center">
+                      <span className="text-white font-bold text-lg ml-3">Excellent</span>
+                      <span className="text-white text-lg ml-1 mr-2">print quality</span>
+                    </div>
+                  </div>
+                </>
+                ) : ( <></> )
+                  }
+               
               </div>
             </div>
           </div>
